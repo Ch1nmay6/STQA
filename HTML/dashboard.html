@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - COVID-19 Info</title>
+    <script>
+        function refreshContent() {
+            document.getElementById("updatedContent").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <button id="refreshButton" onclick="refreshContent()">Refresh Data</button>
+    <div id="updatedContent" style="display:none;">COVID-19 data refreshed!</div>
+</body>
+</html>

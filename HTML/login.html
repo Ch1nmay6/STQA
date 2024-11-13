@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - COVID-19 Info</title>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if (username !== "registeredUser" || password !== "CorrectPassword") {
+                document.getElementById("loginError").style.display = "block";
+                return false;
+            }
+            window.location.href = "dashboard.html";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="return validateLogin()">
+        <label>Username:</label><br>
+        <input type="text" id="username"><br>
+        <label>Password:</label><br>
+        <input type="password" id="password"><br><br>
+        <button id="loginButton" type="submit">Login</button>
+        <p id="loginError" style="display:none;color:red;">Invalid username or password</p>
+    </form>
+</body>
+</html>

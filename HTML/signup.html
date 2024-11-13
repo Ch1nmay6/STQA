@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - COVID-19 Info</title>
+    <script>
+        function validateSignup() {
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").style.display = "block";
+                return false;
+            }
+            document.getElementById("successMessage").style.display = "block";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form onsubmit="return validateSignup()">
+        <label>Username:</label><br>
+        <input type="text" id="username"><br>
+        <label>Email:</label><br>
+        <input type="email" id="email"><br>
+        <span id="emailError" style="display:none;color:red;">Invalid email format</span><br>
+        <label>Password:</label><br>
+        <input type="password" id="password"><br>
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirmPassword"><br><br>
+        <button id="signupButton" type="submit">Sign Up</button>
+        <p id="successMessage" style="display:none;color:green;">Signup successful!</p>
+    </form>
+</body>
+</html>
